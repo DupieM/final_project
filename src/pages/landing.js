@@ -8,7 +8,7 @@ import axios from "axios";
 function Landing() {
 
     const [apiData, setApiData] = useState([]);
-    const [animalName, setAnimalName] = useState("");
+    const [animalName, setAnimalName] = useState("Loading..");
     const [animalLocation, setAnimalLocation] = useState("");
     const [animalLocation2, setAnimalLocation2] = useState("");
     const [animalLocation3, setAnimalLocation3] = useState("");
@@ -115,19 +115,19 @@ function Landing() {
             </Carousel>
 
             <Card style={{width: '60%', marginLeft: '35%', marginTop: '20px', backgroundColor: '#577D92'}}>
-                <Card.Body style={{padding: '4%'}}>
+                <Card.Body style={{padding: '3%'}}>
                     <Card.Title>Dataset Outline</Card.Title>
                     <Card.Text>
-                        The chosen dataset can be used to either get information of a certain animal
-                        or it can be used to compare diffrent animals with eacother (like <i>"Saber Tooth tiger vs Malayan Tiger" </i> 
-                        or <i>"Cheetah vs Lion"</i>). The data that will be given can be used to get spesific information
-                        like the Name of the animal, the taxomy, the location where they live and spesific charecteristics
-                        of the animal chosen form the dataset. <br />
+                        The wild animal dataset can be used to either get information of a certain animal or to compare different 
+                        animals with each other for example <i>"Saber Tooth tiger vs Malayan Tiger" </i> or <i>"Cheetah vs Lion"</i>. 
+                        The data retrieved from the API can be used to get information about any wild animal like the name of the 
+                        animal, the taxomy, the location where they live and other specific characteristics about the animal chosen 
+                        form the dataset.<br />
                         <br />
-                        Some attributes of the animal that can easily be compared with eachother
-                        are taxomy (<i>The order on food chain</i>), location where they live and characteristics like (<i>Prey, Estamated Population 
-                        Size, Habitat, Gestation Period, Average Litter Size, Number of Species, Skin Type, Top Speed, Lifespan, Weight, Height and 
-                        Age of Weaning</i>).
+                        Some characteristics of the wild animals that can easily be compared with each other are taxomy (<i>The 
+                        order on food chain</i>), location where you can find them and characteristics like <i>Prey (what they eat), 
+                        Estimated Population Size, Habitat (where they live), Gestation Period, Average Litter Size, Number of 
+                        Species, Skin Type, Top Speed, Lifespan, Weight, Height and Age of Weaning</i>.
                     </Card.Text>
                 </Card.Body>
             </Card>      
