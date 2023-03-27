@@ -3,6 +3,8 @@ import Background from './background2.jpg';
 import {useState, useEffect} from "react";
 import { Card, CarouselItem } from "react-bootstrap"
 import { Carousel } from "react-bootstrap"
+import { Pie } from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2'
 import axios from "axios";
 
 function Landing() {
@@ -35,12 +37,119 @@ function Landing() {
         })
     }, [])
 
+    const [tigerData, setCrocodileData] = useState([]);
+    const [crocodileNames, setCrocodileNames] = useState([]);
+    const [crocodileNumber_Species, setCrocodileNumber_Species] = useState([]);
+
+    useEffect(()=>{
+        axios({
+            method: "GET",
+            url: "https://api.api-ninjas.com/v1/animals?name=crocodile",
+            headers: { 'X-Api-Key': 'p31mA3zAJl7xjNaNX7Zdaw==Ms3ncGa9PnAHgpIi'},
+            contentType: 'application/json',
+          })
+          .then((response) => {
+            // console.log(response.data)
+            setCrocodileData(response.data)
+      
+            // Extract tiger names and average litter sizes from response data
+            const getCrocodileNames = response.data.map((crocodile) => crocodile.name);
+            const crocodileNumber_Species = response.data.map((crocodile) => crocodile.characteristics.number_of_species);
+    
+            
+            // Update state variables
+            setCrocodileNames(getCrocodileNames);
+            setCrocodileNumber_Species(crocodileNumber_Species);
+      
+            console.log(getCrocodileNames);
+            console.log(crocodileNumber_Species);
+          })
+    }, [])
+
+    const chartData = {
+        labels: crocodileNames,
+        datasets: [
+          {
+            label: 'Number of Species',
+            data: crocodileNumber_Species,
+            borderColor: '#577D92',
+            backgroundColor: [
+                'rgba(0, 178, 255, 0.2)',
+                'rgba(0, 255, 117, 0.2)',
+                'rgba(66, 0, 255, 0.2)',
+                'rgba(143, 0, 255, 0.2)',
+              ],
+          },
+        ]
+    }
+
+    const [hippoData, setHippoData] = useState([]);
+    const [hippoNames, setHippoNames] = useState([]);
+    const [hippoPopulationSize, setHippoPopulationSize] = useState([]);
+
+    useEffect(()=>{
+        axios({
+            method: "GET",
+            url: "https://api.api-ninjas.com/v1/animals?name=panda",
+            headers: { 'X-Api-Key': 'p31mA3zAJl7xjNaNX7Zdaw==Ms3ncGa9PnAHgpIi'},
+            contentType: 'application/json',
+          })
+          .then((response) => {
+            // console.log(response.data)
+            setHippoData(response.data)
+      
+            // Extract tiger names and average litter sizes from response data
+            const getHippoNames = response.data.map((hippo) => hippo.name);
+            const hippoPopulationSize = response.data.map((hippo) => hippo.characteristics.average_litter_size);
+    
+            
+            // Update state variables
+            setHippoNames(getHippoNames);
+            setHippoPopulationSize(hippoPopulationSize);
+      
+            console.log(getHippoNames);
+            console.log(hippoPopulationSize);
+          })
+    }, [])
+
+    const chartHPData = {
+        labels: hippoNames,
+        datasets: [
+          {
+            label: 'Average Litter Size',
+            data: hippoPopulationSize,
+            backgroundColor: 'rgba(255, 299, 0, 0.2)',
+          },
+        ]
+    }
+
     return (
         <div className="App">
             <div style={{ margin: '0px' }}>
                 <img src={Background} alt="tiger" style={{ width: '1423px', height: '710px'}}/>
             </div>
-            <Card style={{marginTop: '-45%', marginLeft: '35%' ,padding: '1%', width: '35%', backgroundColor: '#577D92'}}>
+
+            <Card style={{marginTop: '-45%', marginLeft: '3%' ,padding: '0.7%', width: 400, height: 360, backgroundColor: '#577D92'}}>
+                <Card.Title style={{fontSize: '19pt',}}>Crocodile Species</Card.Title>
+                <div style={{width: 200, marginLeft: '90px', color: 'black'}}>
+                    <Pie data={chartData} />
+                </div>
+                <Card.Body>
+                    <Card.Text style={{fontSize: '12pt',}}>
+                        As can be seen above there are 4 Types of different Crocodiles.
+                        The chart shows the number of species within each type that you get. 
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+
+            <Card style={{marginTop: '2%', marginLeft: '3%' ,padding: '0.7%', width: 400, height: 180, backgroundColor: '#577D92'}}>
+                <Card.Title style={{fontSize: '19pt',}}>Litter Size for Pandas</Card.Title>
+                <div style={{width: 250, marginLeft: '50px', color: 'black'}}>
+                    <Bar data={chartHPData}/>
+                </div>
+            </Card>
+
+            <Card style={{marginTop: '-39%', marginLeft: '35%' ,padding: '1%', width: '35%', backgroundColor: '#577D92'}}>
                 <Card.Body>
                     <Card.Title style={{fontSize: '19pt',}}>About API</Card.Title>
                     <Card.Text>
