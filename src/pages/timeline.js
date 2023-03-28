@@ -11,6 +11,7 @@ function Timeline() {
     const [tigerData, setTigerData] = useState([]);
     const [tigerNames, setTigerNames] = useState([]);
     const [litterSizes, setLitterSizes] = useState([]);
+    const [tigertopSpeed, setTopSpeed] = useState([]);
   
     useEffect(() => {
       axios({
@@ -26,14 +27,17 @@ function Timeline() {
         // Extract tiger names and average litter sizes from response data
         const getTigerNames = response.data.map((tiger) => tiger.name);
         const tigerLitterSizes = response.data.map((tiger) => tiger.characteristics.average_litter_size);
+        const tigerTopSpeed = response.data.map((tiger) => tiger.characteristics.top_speed);
 
         
         // Update state variables
         setTigerNames(getTigerNames);
         setLitterSizes(tigerLitterSizes);
+        setTopSpeed(tigerTopSpeed);
   
         console.log(getTigerNames);
         console.log(tigerLitterSizes);
+        console.log(tigerTopSpeed);
       })
     }, [])
   
@@ -46,6 +50,11 @@ function Timeline() {
           data: litterSizes,
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
         },
+        {
+          label: 'Top Speed',
+          data: tigertopSpeed,
+          backgroundColor: 'rgba(66, 0, 255, 0.5)',
+        }
       ]
     }
   
