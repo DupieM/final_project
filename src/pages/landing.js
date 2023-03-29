@@ -112,6 +112,22 @@ function Landing() {
           })
     }, [])
 
+    const options = {
+        responsive: true,
+        animation: {
+          animateRotate: false,
+          animateScale: true,
+        },
+        plugins: {
+          legend: {
+            position: "right",
+            labels: {
+                color: 'black'
+              }
+          },
+        }
+      };
+
     const chartHPData = {
         labels: hippoNames,
         datasets: [
@@ -132,7 +148,7 @@ function Landing() {
             <Card style={{marginTop: '-45%', marginLeft: '3%' ,padding: '0.7%', width: 400, height: 360, backgroundColor: '#577D92'}}>
                 <Card.Title style={{fontSize: '19pt',}}>Crocodile Species</Card.Title>
                 <div style={{width: 200, marginLeft: '90px', color: 'black'}}>
-                    <Pie data={chartData} />
+                    <Pie options={options} data={chartData} />
                 </div>
                 <Card.Body>
                     <Card.Text style={{fontSize: '12pt',}}>
