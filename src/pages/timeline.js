@@ -5,45 +5,21 @@ import {Line} from 'react-chartjs-2';
 import Background from './background2.jpg';
 import { Card } from "react-bootstrap"
 import axios from "axios";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 function Timeline() {
 
-    const [tigerData, setTigerData] = useState([]);
-    const [tigerNames, setTigerNames] = useState([]);
-    const [litterSizes, setLitterSizes] = useState([]);
-  
-    useEffect(() => {
-      axios({
-        method: "GET",
-        url: "https://api.api-ninjas.com/v1/animals?name=tiger",
-        headers: { 'X-Api-Key': 'p31mA3zAJl7xjNaNX7Zdaw==Ms3ncGa9PnAHgpIi'},
-        contentType: 'application/json',
-      })
-      .then((response) => {
-        // console.log(response.data)
-        setTigerData(response.data)
-  
-        // Extract tiger names and average litter sizes from response data
-        const getTigerNames = response.data.map((tiger) => tiger.name);
-        const tigerLitterSizes = response.data.map((tiger) => tiger.characteristics.average_litter_size || 0);
-        
-        
-        // Update state variables
-        setTigerNames(getTigerNames);
-        setLitterSizes(tigerLitterSizes);
-  
-        console.log(getTigerNames);
-        console.log(tigerLitterSizes);
-      })
-    }, [])
+    const [animalData, setAnimalData] = useState([]);
+    const [animalNames, setAnimalNames] = useState([]);
+    const [animalitterlSizes, setAnimalLitterSizes] = useState([]);
   
     // Format data for line chart
     const chartData = {
-      labels: tigerNames,
+      labels: animalNames,
       datasets: [
         {
           label: 'Average litter size',
-          data: litterSizes,
+          data: animalitterlSizes,
           backgroundColor: 'rgba(255, 99, 132, 0.5)',
         },
       ]
@@ -60,6 +36,40 @@ function Timeline() {
                     <Line data={chartData} />
                 </div>
             </Card>
+
+            <select onChange={(e) => {
+              console.log(e.target.value)
+              axios({
+                method: "GET",
+                url: 'https://api.api-ninjas.com/v1/animals?name=' + e.target.value,
+                headers: { 'X-Api-Key': 'p31mA3zAJl7xjNaNX7Zdaw==Ms3ncGa9PnAHgpIi'},
+                contentType: 'application/json',
+              })
+              .then((response) => {
+                // console.log(response.data)
+                setAnimalData(response.data)
+          
+                // Extract tiger names and average litter sizes from response data
+                const getAnimalNames = response.data.map((animal) => animal.name);
+                const animalLitterSizes = response.data.map((animal) => animal.characteristics.average_litter_size || 0);
+                
+                
+                // Update state variables
+                setAnimalNames(getAnimalNames);
+                setAnimalLitterSizes(animalLitterSizes);
+          
+                console.log(getAnimalNames);
+                console.log(animalLitterSizes);
+              })
+
+            }}>
+              <option value="">Choose Animal</option>
+              <option value="tiger">Tiger</option>
+              <option value="lion">Lion</option>
+              <option value="cat">Cat</option>
+              <option value="dog">Dog</option>
+              <option value="fox">Fox</option>
+            </select>
             
         </div>
       )
