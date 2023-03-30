@@ -74,18 +74,18 @@ function Landing() {
             data: crocodileNumber_Species,
             borderColor: '#577D92',
             backgroundColor: [
-                'rgba(0, 178, 255, 0.2)',
-                'rgba(0, 255, 117, 0.2)',
-                'rgba(66, 0, 255, 0.2)',
-                'rgba(143, 0, 255, 0.2)',
+                'rgba(107, 239, 255, 0.4)',
+                'rgba(65, 215, 235, 0.4)',
+                'rgba(93, 182, 201, 0.4)',
+                'rgba(207, 219, 221, 0.4)',
               ],
           },
         ]
     }
 
-    const [hippoData, setHippoData] = useState([]);
-    const [hippoNames, setHippoNames] = useState([]);
-    const [hippoPopulationSize, setHippoPopulationSize] = useState([]);
+    const [pandaData, setPandaData] = useState([]);
+    const [pandaNames, setPandaNames] = useState([]);
+    const [pandaLitterSize, setPandaLitterSize] = useState([]);
 
     useEffect(()=>{
         axios({
@@ -96,23 +96,37 @@ function Landing() {
           })
           .then((response) => {
             // console.log(response.data)
-            setHippoData(response.data)
+            setPandaData(response.data)
       
             // Extract tiger names and average litter sizes from response data
-            const getHippoNames = response.data.map((hippo) => hippo.name);
-            const hippoPopulationSize = response.data.map((hippo) => hippo.characteristics.average_litter_size);
+            const getPandaNames = response.data.map((panda) => panda.name);
+            const pandaLitterSize = response.data.map((panda) => panda.characteristics.average_litter_size);
     
             
             // Update state variables
-            setHippoNames(getHippoNames);
-            setHippoPopulationSize(hippoPopulationSize);
+            setPandaNames(getPandaNames);
+            setPandaLitterSize(pandaLitterSize);
       
-            console.log(getHippoNames);
-            console.log(hippoPopulationSize);
+            console.log(getPandaNames);
+            console.log(pandaLitterSize);
           })
     }, [])
 
     const options = {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "right",
+            labels: {
+                color: 'black',
+                boxWidth: 20,
+                padding: 5
+              }
+          },
+        }
+      };
+
+      const optionsBar = {
         responsive: true,
         animation: {
           animateRotate: false,
@@ -120,21 +134,39 @@ function Landing() {
         },
         plugins: {
           legend: {
-            position: "right",
+            position: "top",
             labels: {
                 color: 'black'
               }
           },
-        }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: 'black',
+                },
+                grid: {
+                    color: 'rgba(104,104,104,0.7)',
+                },
+            },
+            y: {
+                ticks: {
+                    color: 'black',
+                },
+                grid: {
+                    color: 'rgba(104,104,104,0.7)',
+                },
+            }
+          }
       };
 
     const chartHPData = {
-        labels: hippoNames,
+        labels: pandaNames,
         datasets: [
           {
             label: 'Average Litter Size',
-            data: hippoPopulationSize,
-            backgroundColor: 'rgba(255, 299, 0, 0.2)',
+            data: pandaLitterSize,
+            backgroundColor: 'rgba(107, 239, 255, 0.5)',
           },
         ]
     }
@@ -147,11 +179,11 @@ function Landing() {
 
             <Card style={{marginTop: '-45%', marginLeft: '3%' ,padding: '0.7%', width: 400, height: 360, backgroundColor: '#577D92'}}>
                 <Card.Title style={{fontSize: '19pt',}}>Crocodile Species</Card.Title>
-                <div style={{width: 200, marginLeft: '90px', color: 'black'}}>
+                <div style={{width: 300, marginLeft: '48px', color: 'black', marginTop: '-14%'}}>
                     <Pie options={options} data={chartData} />
                 </div>
                 <Card.Body>
-                    <Card.Text style={{fontSize: '12pt',}}>
+                    <Card.Text style={{fontSize: '12pt', marginTop: '-17%'}}>
                         As can be seen above there are 4 Types of different Crocodiles.
                         The chart shows the number of species within each type that you get. 
                     </Card.Text>
@@ -161,7 +193,7 @@ function Landing() {
             <Card style={{marginTop: '2%', marginLeft: '3%' ,padding: '0.7%', width: 400, height: 180, backgroundColor: '#577D92'}}>
                 <Card.Title style={{fontSize: '19pt',}}>Litter Size for Pandas</Card.Title>
                 <div style={{width: 250, marginLeft: '50px', color: 'black'}}>
-                    <Bar data={chartHPData}/>
+                    <Bar options={optionsBar} data={chartHPData}/>
                 </div>
             </Card>
 

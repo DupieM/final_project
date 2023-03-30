@@ -10,8 +10,8 @@ function BasicNavbar() {
             <Container style={{textAlign: 'left'}}>
                 <Navbar.Brand href="/"><img src={logo} style={{width: '17%'}}/></Navbar.Brand>
                 <Nav>
-                    <Nav.Link href="/compare" style={{fontSize: '17pt', color: 'black', fontWeight: 'bold'}}>Compare</Nav.Link>
-                    <Nav.Link href="/time" style={{fontSize: '17pt', color: 'black', fontWeight: 'bold'}}>Timeline</Nav.Link>
+                    <Nav.Link href="/compare" style={{fontSize: '17pt', color: '#373737', fontWeight: 'bold'}}>Compare</Nav.Link>
+                    <Nav.Link href="/time" style={{fontSize: '17pt', color: '#373737', fontWeight: 'bold'}}>Timeline</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
