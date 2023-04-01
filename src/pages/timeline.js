@@ -94,8 +94,8 @@ function Timeline() {
                   console.log(getAnimalNames);
                   console.log(animalLitterSizes);
                 })
-                }} style={{width: 140, backgroundColor: '#6897B0', marginLeft: '82%', border: 'none', marginTop: '-36%'}}>
-                  <option value="">Choose Animal</option>
+                }} style={{width: 140, backgroundColor: '#6897B0', marginLeft: '82%', marginTop: '-36%', borderColor: 'rgb(195, 176, 0)', borderWidth: 1}}>
+                  <option value="">Choose Breed</option>
                   <option value="tiger">Tiger</option>
                   <option value="lion">Lion</option>
                   <option value="cat">Cat</option>
@@ -103,10 +103,11 @@ function Timeline() {
                   <option value="fox">Fox</option>
                 </select>
                 <p style={{marginLeft: '78%', marginTop: '3%', marginRight: '3%'}}>
-                  Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies 
-                  sollicitudin erat facilisis eget. Vestibulum rhoncus dui vel eros laoreet. Lorem ipsum dolor sit 
-                  amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis 
-                  eget. Vestibulum rhoncus dui vel eros laoreet.
+                  Here you can view the litter size* of any of the following animal breeds**: <br />
+                  Tiger, Lion, Cat, Dog and Fox <br />
+                  <br />
+                  * Please note for some breeds no data is avaible and therefor it will be show as zero <br />
+                  ** Select the breed interested in from the dropdown box
                 </p>
             </Card>
         </div>
