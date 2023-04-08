@@ -119,12 +119,12 @@ function Compare() {
           {
             label: Char3,
             data: Char1,
-            backgroundColor: 'rgba(195, 176, 0, 0.6)',
+            backgroundColor: 'rgba(195, 176, 0, 0.5)',
           },
           {
             label: Char4,
             data: Char2,
-            backgroundColor: 'rgba(53, 162, 235, 0.6)',
+            backgroundColor: 'rgba(53, 162, 235, 0.8)',
           },
         ]
     };
