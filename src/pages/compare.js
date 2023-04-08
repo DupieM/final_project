@@ -20,10 +20,16 @@ function Compare() {
     const [animalNumberSpecies1, setAnimalNumberSpecies1] = useState([]);
     const [Char1, setChar1] = useState([]);
     const [Char2, setChar2] = useState([]);
+    const [Char3, setChar3] = useState([]);
+    const [Char4, setChar4] = useState([]);
     
     // Array for radar
     let animal1 =[]
     let animal2 =[]
+
+    // Array for radar name
+    let animalname1 =[]
+    let animalname2 =[]
 
     // Format data for Bar chart
     const chartData = {
@@ -42,7 +48,41 @@ function Compare() {
             borderColor: 'rgba(53, 162, 235, 0.5)',
           },
         ]
-    }
+    };
+
+    const options = {
+      responsive: true,
+      animation: {
+        animateRotate: false,
+        animateScale: true,
+      },
+      plugins: {
+        legend: {
+          position: "top",
+          labels: {
+              color: 'black'
+            }
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: 'black',
+          },
+          grid: {
+            color: 'rgba(104,104,104,0.7)',
+          },
+        },
+        y: {
+          ticks: {
+            color: 'black',
+          },
+          grid: {
+            color: 'rgba(104,104,104,0.7)',
+          },
+        }
+      }
+    };
 
     // Format data for Pie chart
     const chartData1 = {
@@ -55,24 +95,72 @@ function Compare() {
             borderColor: 'rgba(87, 125, 146, 0.6)',
           },
         ]
-    }
+    };
 
+    const options1 = {
+      responsive: true,
+      animation: {
+        animateRotate: false,
+        animateScale: true,
+      },
+      plugins: {
+        legend: {
+          position: "top",
+          labels: {
+              color: 'black'
+            }
+        },
+      }
+    };
     // Format data for Radar chart
     const chartData2 = {
         labels: ['Age of Weaning', 'Gestation Period', 'Life Span', 'Sexual Maturity', 'Weight', 'Height'],
         datasets: [
           {
-            label: "Name1",
+            label: Char3,
             data: Char1,
             backgroundColor: 'rgba(195, 176, 0, 0.6)',
           },
           {
-            label: "Name2",
+            label: Char4,
             data: Char2,
             backgroundColor: 'rgba(53, 162, 235, 0.6)',
           },
         ]
-    }
+    };
+
+    const options2 = {
+      responsive: true,
+      animation: {
+        animateRotate: false,
+        animateScale: true,
+      },
+      plugins: {
+        legend: {
+          position: "top",
+          labels: {
+              color: 'black'
+            }
+        },
+      },
+      scales: {
+        r: {
+          angleLines: {
+            color: 'rgba(90,90,90,0.7)',
+          },
+          grid: {
+            color: 'rgba(90,90,90,0.7)',
+          },
+          pointLabels: {
+            color: 'black',
+          },
+          ticks: {
+            color: 'black',
+            
+          }
+        }
+      }
+    };
 
     return (
         <div className="App">
@@ -82,19 +170,19 @@ function Compare() {
 
             <Card style={{marginTop: '-54%', marginLeft: '4%' ,padding: '1%', width: 650, backgroundColor: '#577D92', height: 340}}>
               <div style={{width: 610, marginLeft: 7, marginTop: 5}}>
-                <Bar data={chartData} />
+                <Bar options={options} data={chartData} />
               </div>
             </Card>
 
             <Card style={{marginTop: '1.8%', marginLeft: '6%' , marginBottom: 5, padding: '1%', width: 600, backgroundColor: '#577D92', height: 380}}>
               <div style={{width: 360, marginLeft: 90, marginTop: -7}}>
-                <Pie data={chartData1} />
+                <Pie options={options1} data={chartData1} />
               </div>
             </Card>
 
             <Card style={{marginTop: '-52.8%', marginLeft: '53%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 580}}>
               <div style={{width: 560, marginLeft: 7, marginTop: 5}}>
-                <Radar data={chartData2} />
+                <Radar options={options2} data={chartData2} />
               </div>
             </Card>
 
@@ -119,6 +207,7 @@ function Compare() {
                   const animalWeight = response.data[0].characteristics.weight.slice(0,2);
                   const animalHeight = response.data[0].characteristics.length.slice(0,2);
 
+                  animalname1.push(getAnimalNames);
                   animal1.push(animalAgeWeaning);
                   animal1.push(animalGestationPeriod);
                   animal1.push(animalLifeSpan);
@@ -130,10 +219,14 @@ function Compare() {
                   setAnimalTopSpeed(animalTopSpeed);
                   setAnimalNumberSpecies(animalNumberSpecies);
                   setChar1(animal1);
+                  setChar3(animalname1);
                 })
-                }} style={{width: 170}}>
+                }} style={{width: 170, marginLeft: 100}}>
                 <option value="">Choose Animal One</option>
                 <option value="clouded leopard">Clouded Leopard</option>
+                <option value="african wild dog">African Wild Dog</option>
+                <option value="dusky dolphin">Dusky Dolphin</option>
+                <option value="blue whale">Blue Whale</option>
               </select>
               <select onChange={(d) => {
                 console.log(d.target.value)
@@ -153,11 +246,12 @@ function Compare() {
                   const animalLifeSpan1 = response.data[0].characteristics.lifespan.slice(0,2);
                   const animalAgeSexualMaturity1 = response.data[0].characteristics.age_of_sexual_maturity.slice(0,1);
                   const animalWeight1 = response.data[0].characteristics.weight.slice(6,8);
-                  const animalHeight1 = response.data[0].characteristics.height.split("")[0];
+                  const animalHeight1 = response.data[0].characteristics.height.slice(0,2);
 
                   console.log(animalWeight1);
                   console.log(animalGestationPeriod1);
 
+                  animalname2.push(getAnimalNames1);
                   animal2.push(animalAgeWeaning1);
                   animal2.push(animalGestationPeriod1);
                   animal2.push(animalLifeSpan1);
@@ -169,10 +263,14 @@ function Compare() {
                   setAnimalTopSpeed1(animalTopSpeed1);
                   setAnimalNumberSpecies1(animalNumberSpecies1);
                   setChar2(animal2);
+                  setChar4(animalname2);
                 })
-                }}  style={{width: 170}}>
+                }}  style={{width: 170, marginLeft: 280, marginTop: -25.7}}>
                 <option value="">Choose Animal Two</option>
                 <option value="cape lion">Cape Lion</option>
+                <option value="cheetah">Cheetah</option>
+                <option value="patas monkey">Patas Monkey</option>
+                <option value="koala">Koala</option>
               </select>
             </Card> 
         </div>
