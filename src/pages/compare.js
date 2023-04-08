@@ -1,6 +1,8 @@
 import React from "react";
+import Background from './background2.jpg';
 import { useState, useEffect } from 'react';
-import { Chart as Chartjs } from 'chart.js/auto'
+import { Chart as Chartjs } from 'chart.js/auto';
+import { Card } from "react-bootstrap";
 import {Bar} from 'react-chartjs-2';
 import {Pie} from 'react-chartjs-2';
 import { Radar } from 'react-chartjs-2';
@@ -50,6 +52,7 @@ function Compare() {
             label: 'Number of species',
             data: [animalNumberSpecies, animalNumberSpecies1],
             backgroundColor: ['rgba(195, 176, 0, 0.6)', 'rgba(53, 162, 235, 0.6)'],
+            borderColor: 'rgba(87, 125, 146, 0.6)',
           },
         ]
     }
@@ -73,10 +76,30 @@ function Compare() {
 
     return (
         <div className="App">
-            <div style={{width: 490, marginLeft: 7, marginTop: 5}}>
-                <Bar data={chartData} />
+            <div style={{ marginTop: 0}}>
+              <img src={Background} alt="tiger" style={{ width: '1423px', height: '820px'}}/>
             </div>
-            <select onChange={(e) => {
+
+            <Card style={{marginTop: '-54%', marginLeft: '4%' ,padding: '1%', width: 650, backgroundColor: '#577D92', height: 340}}>
+              <div style={{width: 610, marginLeft: 7, marginTop: 5}}>
+                <Bar data={chartData} />
+              </div>
+            </Card>
+
+            <Card style={{marginTop: '1.8%', marginLeft: '6%' , marginBottom: 5, padding: '1%', width: 600, backgroundColor: '#577D92', height: 380}}>
+              <div style={{width: 360, marginLeft: 90, marginTop: -7}}>
+                <Pie data={chartData1} />
+              </div>
+            </Card>
+
+            <Card style={{marginTop: '-52.8%', marginLeft: '53%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 580}}>
+              <div style={{width: 560, marginLeft: 7, marginTop: 5}}>
+                <Radar data={chartData2} />
+              </div>
+            </Card>
+
+            <Card style={{marginTop: '1.6%', marginLeft: '53%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 140}}>
+              <select onChange={(e) => {
                 console.log(e.target.value)
                 axios({
                     method: "GET",
@@ -108,11 +131,11 @@ function Compare() {
                   setAnimalNumberSpecies(animalNumberSpecies);
                   setChar1(animal1);
                 })
-                }}>
-                <option value="">Choose Animal</option>
+                }} style={{width: 170}}>
+                <option value="">Choose Animal One</option>
                 <option value="clouded leopard">Clouded Leopard</option>
-            </select>
-            <select onChange={(d) => {
+              </select>
+              <select onChange={(d) => {
                 console.log(d.target.value)
                 axios({
                     method: "GET",
@@ -147,17 +170,11 @@ function Compare() {
                   setAnimalNumberSpecies1(animalNumberSpecies1);
                   setChar2(animal2);
                 })
-                }}>
-                <option value="">Choose Animal</option>
+                }}  style={{width: 170}}>
+                <option value="">Choose Animal Two</option>
                 <option value="cape lion">Cape Lion</option>
-            </select>
-
-            <div style={{width: 340, marginLeft: 7, marginTop: 5}}>
-                <Pie data={chartData1} />
-            </div>
-            <div style={{width: 560, marginLeft: 7, marginTop: 5}}>
-                <Radar data={chartData2} />
-            </div>
+              </select>
+            </Card> 
         </div>
     )
 }
