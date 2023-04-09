@@ -33,7 +33,7 @@ function Compare() {
 
     // Format data for Bar chart
     const chartData = {
-        labels: ['Top Speed'],
+        labels: ['Top Speed (mph)'],
         datasets: [
           {
             label: animalNames,
@@ -156,7 +156,7 @@ function Compare() {
           },
           ticks: {
             color: 'black',
-            
+            backdropColor: 'rgba(87,125,146,1)'
           }
         }
       }
@@ -168,25 +168,7 @@ function Compare() {
               <img src={Background} alt="tiger" style={{ width: '1423px', height: '820px'}}/>
             </div>
 
-            <Card style={{marginTop: '-54%', marginLeft: '4%' ,padding: '1%', width: 650, backgroundColor: '#577D92', height: 340}}>
-              <div style={{width: 610, marginLeft: 7, marginTop: 5}}>
-                <Bar options={options} data={chartData} />
-              </div>
-            </Card>
-
-            <Card style={{marginTop: '1.8%', marginLeft: '6%' , marginBottom: 5, padding: '1%', width: 600, backgroundColor: '#577D92', height: 380}}>
-              <div style={{width: 360, marginLeft: 90, marginTop: -7}}>
-                <Pie options={options1} data={chartData1} />
-              </div>
-            </Card>
-
-            <Card style={{marginTop: '-52.8%', marginLeft: '53%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 580}}>
-              <div style={{width: 560, marginLeft: 7, marginTop: 5}}>
-                <Radar options={options2} data={chartData2} />
-              </div>
-            </Card>
-
-            <Card style={{marginTop: '1.6%', marginLeft: '53%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 140}}>
+            <Card style={{marginTop: '-54%', marginLeft: '4%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 140}}>
               <select onChange={(e) => {
                 console.log(e.target.value)
                 axios({
@@ -272,7 +254,34 @@ function Compare() {
                 <option value="patas monkey">Patas Monkey</option>
                 <option value="koala">Koala</option>
               </select>
+              <p style={{marginTop: 11}}>
+                On this page you can compare interesting facts on two animals that you choose above. The bar chart compares
+                the top speed, the pie chart compares the number of species and the radar chart compares 6 different facts. 
+              </p>
             </Card> 
+
+            <Card style={{marginTop: '1.6%', marginLeft: '4%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 580}}>
+              <div style={{width: 560, marginLeft: 7, marginTop: 5}}>
+                <Radar options={options2} data={chartData2} />
+              </div>
+            </Card>
+
+            <Card style={{marginTop: '-52%', marginLeft: '50%' ,padding: '1%', width: 650, backgroundColor: '#577D92', height: 340}}>
+              <div style={{width: 610, marginLeft: 7, marginTop: 5}}>
+                <Bar options={options} data={chartData} />
+              </div>
+            </Card>
+
+            <Card style={{marginTop: '1.8%', marginLeft: '52%' , marginBottom: 5, padding: '1%', width: 600, backgroundColor: '#577D92', height: 380}}>
+              <p>Number of Species</p>
+              <div style={{width: 320, marginLeft: 125, marginTop: -7}}>
+                <Pie options={options1} data={chartData1} />
+              </div>
+            </Card>
+
+            
+
+            
         </div>
     )
 }

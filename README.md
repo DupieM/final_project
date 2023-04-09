@@ -1,23 +1,35 @@
 # About the Project
 ## Project Description
-    We took on the role of a data driven devolper, whe were tasked with implementing a real world data driven application.
-    We could also use an API of our choice for the data. We needed to focuss this term on research, analysis, implementation
-    and visualisation of the API of our choice. We also needed to use charts.js to display our data on diffrent charts. We 
-    needed to use React to create the framwork of our front end of the website.
+    I took on the role of a data driven devoloper, being tasked with implementing a real world data driven web application.
+    I could use an API of my choice for the data that had to be collected. I needed to focus this term on research, analysis, implementation and visualisation of the API of my choice. The project needed to use charts.js to display the data on different charts and it also needed to use React to create the framework of the front end of the website.
 
 ## Built with
-    React - open-source front-end JavaScript library
-    Charts.js - open source data visualisation framework
-    GitHub - Internet hosting service
+    React - Open-source front-end JavaScript library
+    Charts.js - Open source data visualisation framework
     JS - JavaScript 
     CSS - Cascading Style Sheet
+    GitHub - Internet hosting service for software development and version control using GIT
+    Visual Studio - Integranted Development Enviroment
 
 # Getting Started
 ## Prerequisites
-    ????
+    You will need to have the react app dowloaded on your device.
+    You will also need visual studio code to can use the react app function.
 
 ## How to install
-### Getting Started with Create React App
+### First you need to create a new file for your project and open it in visual studio code
+
+### Then you will need to open your terminal in visual studio by clicking on Terminal
+
+### Then you will need to install the stuff that you want to use namely like these
+* npx create-react app (yourname) - *this is to instaal react app*
+* npm i react-router-dom *To activate react routing*
+* npm i axios *To be able to make a API connection*
+* npm i bootstrap react-bootstrap *to be able to use bootsrap functions*
+* npm i react-chartjs-2 chart.js *to be able to use diffrent charts on your website*
+* npm start *to start your react app*
+
+#### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -91,19 +103,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Features and Functionality
 ## Landing Dashboard
-    On the dashboard page the user can find more information about the website and the API that we use.
+    I needed to display a summary or breakdown of the chosen dataset. I also should display information like key factors of the research or the chosen dataset. On the dashboard page the user can find more information about the website and the API that is used. The data set is outlined as to explain the type of data that will be used for this web application. On this page there is a carousel that displays a distinct animal visually with some interesting facts. There are also two charts on the page, one chart shows the average litter size of panda species and anoder chart that shows number of species for crocodiles.
 
 ## Comparison Page
-    On the comparison page there are three charts that display properties that you can use to compare two animals with. The Pie chart shows the number of species for the chosen animals. The Bar chart shows . The Radar chart shows.
+    I needed to display three charts on this page, where data could be changed by a selection from a dropdown box. The three charts are a Pie, Bar and Radar chart. Based on the selection made three charts will be displayed as to compare two animals with. The Pie chart shows the number of species for the chosen animals. The Bar chart shows the top speed of the two animals chosen. The Radar chart shows the age of weaning, gestation period, life span, sexual maturity, height and weight of the chosen animals. 
 
 ## Timeline Page
-    The timeline page shows the average litter size diffrent animals on a timeline chart.
+    I needed to display a timeline chart on this page where the data could be changed by a dropdown box. The timeline page shows the average litter size of the chosen animal on a timeline chart. Five different animals can be chosen. 
     
-
 
 # Concept Process
 ## Ideation
-    These are links too my two inspirations board on Pinterest to create this website. <br>
+    Please use these links to view my two inspirations board on Pinterest that I used to ideate the website. <br>
 <!-- Links -->
 * https://za.pinterest.com/mdpmarine/inspiration-board-branded-component/ </br>
 [DV200_Branded_Componement_-_Pinterest] (https://za.pinterest.com/mdpmarine/inspiration-board-branded-component/)
@@ -112,31 +123,39 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 [DV200_User_Interface_-_Pinterest] (https://za.pinterest.com/mdpmarine/inspiration-board-user-interface/)
 
 ## Wireframes
-    These are my wireframes that I created for my three pages that I needed to create for this project. <br> 
+    Please use these links to view my wireframes that I created for my three pages that I needed to create for this project. <br> 
 <!-- Images -->
 * ! [Dashboard_Page] (Images\Wireframes\Dashboard Page.jpg) </br>
 * ! [Comparison_Page] (Images\Wireframes\Comparison Page.jpg) </br>
 * ! [Timeline_Page] (Images\Wireframes\Timeline Page.jpg) </br>
 
 ## Custom UI
-    My custom UI element was that I created a very cool background picture to use on my website fot the three pages we needed to create. <br>
+    My custom UI element was that I created an interesting background picture to use on my website for the three pages we needed to create. I also included as a UI element a carousel that displays one exstict animal visually and with interesting facts. I also created a custom logo for this website. <br>
 ! [Background] (Images\UI\ui element.png) </br>
 
 # Devolopment Process
-## Implementation Process <!-- Highlights&Challenges -->
-    ?????
+## Implementation Process
+    The higlight was in researching API's and decinding on which API's to use. Analysing the dataset of my chosen API was also a higlight for me during the development process.
+    Some challeges that I faced while doing this project was to display my different characteristics of animals on the 4 charts we needed to have. Another challange was to activate the dropdown box on the compare and timeline page depending on which ever animal you choose.
 
 # Future Implementation
-    ?????
+    The current web application developed visualize a animal data set but only specific data elemnts from that data set. For future implementations more data elements can be added to show more meaningful patterns as derived from the data.
 
 # Final Outcome 
 ## Mockups
-    ??????
+   Please use these links to view my mockups of my final website application.
+<!-- Images -->
+* ! [M1_Dashboard_Page] (Images\Mockups\Mockup 1 - Dashboard.jpg) </br>
+* ! [M2_Comparison_Page] (Images\Mockups\Mockup 2 - Compare.jpg) </br>
+* ! [M3_Timeline_Page] (Images\Mockups\Mockup 3 - Timeline.jpg) </br> 
 
-## Video Demonstartion
-    ??????
+## Video Demonstration
+    Please use this link to view my demonstartion walkthrough video of my final webasite application.
+<!-- Link -->
+*  </br>
+[DV200_Demo_Video] ()
 
 # Conclusion
-    As can be seen in the demo our website created adhered to the project requirements as requested in the brief. 
-    My final website has a lot of functional elements. The wireframe was used to ensure that the look and feel of the created website was done as expected and we used React, Charts.js, JS, CSS and Github. 
+    As can be seen in the demo the website created adhered to the project requirements as requested in the brief. 
+    My final website has many functional elements. The wireframes was used to ensure that the look and feel of the created website was done as expected, some screen elements was changed during the development process as I realised certain elements needed to be swapped for better readibility. I used React, Charts.js, JS, CSS and Github during the development process. 
 

@@ -282,9 +282,8 @@ function Landing() {
                         form the dataset.<br />
                         <br />
                         Some characteristics of the wild animals that can easily be compared with each other are taxomy (<i>The 
-                        order on food chain</i>), location where you can find them and characteristics like <i>Prey (what they eat), 
-                        Estimated Population Size, Habitat (where they live), Gestation Period, Average Litter Size, Number of 
-                        Species, Skin Type, Top Speed, Lifespan, Weight, Height and Age of Weaning</i>.
+                        order on food chain</i>), location where you can find them and characteristics like <i>Gestation Period, Average 
+                        Litter Size, Number of Species, Top Speed, Lifespan, Weight, Height, Age of Weaning and Age of Sexual maturity</i>.
                     </Card.Text>
                 </Card.Body>
             </Card>      
