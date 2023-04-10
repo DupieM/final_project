@@ -103,11 +103,11 @@ function Timeline() {
                   <option value="fox">Fox</option>
                 </select>
                 <p style={{marginLeft: '78%', marginTop: '3%', marginRight: '3%'}}>
-                  Here you can view the litter size* of any of the following animal breeds**: <br />
+                  Here you can view the litter size* of any of the following animal breeds that contains the word**: <br />
                   Tiger, Lion, Cat, Dog and Fox <br />
                   <br />
                   * Please note for some breeds no data is avaible and therefor it will be show as zero <br />
-                  ** Select the breed interested in from the dropdown box
+                  ** Select the animal 'name' you are interested in from the dropdown box
                 </p>
             </Card>
         </div>

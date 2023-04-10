@@ -152,8 +152,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Video Demonstration
     Please use this link to view my demonstartion walkthrough video of my final webasite application.
 <!-- Link -->
-*  </br>
-[DV200_Demo_Video] ()
+* https://uxi.instructure.com/courses/1855/assignments/13348 </br>
+[Canvas_DV200_Demo_Video] (https://uxi.instructure.com/courses/1855/assignments/13348)
 
 # Conclusion
     As can be seen in the demo the website created adhered to the project requirements as requested in the brief. 
