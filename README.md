@@ -56,7 +56,7 @@ The project needed to use charts.js to display the data on different charts and 
 
 ## Built with
 * ![Static Badge][https://react.dev/]
-* ![Static Badge](https://img.shields.io/badge/charts-url?style=for-the-badge&logo=chart.js&color=grey&link=https%3A%2F%2Fwww.chartjs.org%2F)
+* ![https://img.shields.io/badge/charts-url?style=for-the-badge&logo=chart.js&color=grey&link=https%3A%2F%2Fwww.chartjs.org%2F](https://www.chartjs.org/)
 * ![Static Badge](https://img.shields.io/badge/Github-url?style=for-the-badge&logo=Github&logoColor=white&color=purple&link=https%3A%2F%2Fgithub.com%2F)
 * ![Static Badge](https://img.shields.io/badge/visual%20studio-url?style=for-the-badge&logo=visual%20studio&logoColor=blue&color=black&link=https%3A%2F%2Fcode.visualstudio.com%2F)
 
@@ -124,5 +124,5 @@ Please use this link to view my demonstartion walkthrough video of my final weba
 Rights reserved © 2023
 
 ### Author
-**Mariné du Plessis**
+**Mariné du Plessis** </br>
 [Gmail](mdp.marine@gmail.com)
