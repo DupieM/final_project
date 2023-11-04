@@ -165,10 +165,10 @@ function Compare() {
     return (
         <div className="App">
             <div style={{ marginTop: 0}}>
-              <img src={Background} alt="tiger" style={{ width: '1423px', height: '820px'}}/>
+              <img src={Background} alt="tiger" style={{ width: '1600px', height: '795px'}}/>
             </div>
 
-            <Card style={{marginTop: '-54%', marginLeft: '4%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 140}}>
+            <Card style={{marginTop: '-48%', marginLeft: '4%' ,padding: '1%', width: 600, backgroundColor: '#577D92', height: 140}}>
               <select onChange={(e) => {
                 console.log(e.target.value)
                 axios({
@@ -266,7 +266,7 @@ function Compare() {
               </div>
             </Card>
 
-            <Card style={{marginTop: '-52%', marginLeft: '50%' ,padding: '1%', width: 650, backgroundColor: '#577D92', height: 340}}>
+            <Card style={{marginTop: '-47%', marginLeft: '50%' ,padding: '1%', width: 650, backgroundColor: '#577D92', height: 340}}>
               <div style={{width: 610, marginLeft: 7, marginTop: 5}}>
                 <Bar options={options} data={chartData} />
               </div>

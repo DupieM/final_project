@@ -63,10 +63,10 @@ function Timeline() {
       return (
         <div className="App">
             <div style={{ marginTop: 0}}>
-                <img src={Background} alt="tiger" style={{ width: '1423px', height: '710px'}}/>
+                <img src={Background} alt="tiger" style={{ width: '1600px', height: '795px'}}/>
             </div>
 
-            <Card style={{marginTop: '-41%', marginLeft: '5.5%' ,padding: '1%', width: 1250, backgroundColor: '#577D92', height: 480}}>
+            <Card style={{marginTop: '-39%', marginLeft: '10.5%' ,padding: '1%', width: 1250, backgroundColor: '#577D92', height: 480}}>
                 <div style={{width: 890, marginLeft: 7, marginTop: 5}}>
                     <Line options={options} data={chartData} />
                 </div>

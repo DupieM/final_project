@@ -174,10 +174,10 @@ function Landing() {
     return (
         <div className="App">
             <div style={{ margin: '0px' }}>
-                <img src={Background} alt="tiger" style={{ width: '1423px', height: '710px'}}/>
+                <img src={Background} alt="tiger" style={{ width: '1600px', height: '795px'}}/>
             </div>
 
-            <Card style={{marginTop: '-45%', marginLeft: '3%' ,padding: '0.7%', width: 400, height: 360, backgroundColor: '#577D92'}}>
+            <Card style={{marginTop: '-43%', marginLeft: '3%' ,padding: '0.7%', width: 400, height: 360, backgroundColor: '#577D92'}}>
                 <Card.Title style={{fontSize: '19pt',}}>Crocodile Species</Card.Title>
                 <div style={{width: 300, marginLeft: '48px', color: 'black', marginTop: '-14%'}}>
                     <Pie options={options} data={chartData} />
@@ -197,7 +197,7 @@ function Landing() {
                 </div>
             </Card>
 
-            <Card style={{marginTop: '-39%', marginLeft: '35%' ,padding: '1%', width: '35%', backgroundColor: '#577D92'}}>
+            <Card style={{marginTop: '-35.8%', marginLeft: '35%' ,padding: '1%', width: '35%', backgroundColor: '#577D92'}}>
                 <Card.Body>
                     <Card.Title style={{fontSize: '19pt',}}>About API</Card.Title>
                     <Card.Text>
@@ -208,7 +208,7 @@ function Landing() {
                 </Card.Body>
             </Card>
             
-            <Carousel style={{width: '300px', marginTop: '-15.4%', marginLeft: '74%'}}>
+            <Carousel style={{width: '300px', marginTop: '-12.4%', marginLeft: '74%'}}>
                 <CarouselItem>
                     <Card style={{width: '93%', marginLeft: '3.5%', backgroundColor: '#577D92'}}>
                     <Card.Body style={{paddingTop: '2px', paddingBottom: '0px'}}>
@@ -271,7 +271,7 @@ function Landing() {
                 </CarouselItem>     
             </Carousel>
 
-            <Card style={{width: '60%', marginLeft: '35%', marginTop: '20px', backgroundColor: '#577D92'}}>
+            <Card style={{width: '60%', marginLeft: '35%', marginTop: '25px', backgroundColor: '#577D92'}}>
                 <Card.Body style={{padding: '3%'}}>
                     <Card.Title>Dataset Outline</Card.Title>
                     <Card.Text>
