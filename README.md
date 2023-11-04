@@ -5,7 +5,7 @@
   </a>
 
 <h3 align="center">Wild Animals</h3>
-<h4>This is a website application for a animal API.</h4.>
+<h4 align="center">This is a website application for a animal API.</h4.>
 
 <h5 align="center" style="padding:0;margin:0;">Mariné du Plessis</h5>
 
@@ -44,7 +44,7 @@
 
 
 # Product Mockup
-! [M2_Comparison_Page] (Images/Mockups/Mockup_2_Compare.jpg)
+![image1](Images/Mockups/Mockup_2_Compare.jpg)
 
 
 # About the Project
@@ -55,7 +55,7 @@ I needed to focus this term on research, analysis,implementation and visualisati
 The project needed to use charts.js to display the data on different charts and it also needed to use React to create the framework of the front end of the website.
 
 ## Built with
-* [![React][React.js]][React-url]
+* ![Static Badge][https://react.dev/]
 * ![Static Badge](https://img.shields.io/badge/charts-url?style=for-the-badge&logo=chart.js&color=grey&link=https%3A%2F%2Fwww.chartjs.org%2F)
 * ![Static Badge](https://img.shields.io/badge/Github-url?style=for-the-badge&logo=Github&logoColor=white&color=purple&link=https%3A%2F%2Fgithub.com%2F)
 * ![Static Badge](https://img.shields.io/badge/visual%20studio-url?style=for-the-badge&logo=visual%20studio&logoColor=blue&color=black&link=https%3A%2F%2Fcode.visualstudio.com%2F)
@@ -106,7 +106,7 @@ Some challeges that I faced while doing this project was to display my different
 
 ### Code Snippets
 1. Dropdown box on the compare and timeline page
-! [Comparison_Timeline_page] (Images/Code_snippets_dropdown 1.jpg)
+![Comparison_Timeline_page](Images/Code_snippets_dropdown_1.jpg)
 To fix the problem with the dropdown box to display different animals I decided to add the "onChange" function to the dropdown box.
 This helped me alot by changing the name at end of Api key to be able to get difffernt animal statistics.
 
