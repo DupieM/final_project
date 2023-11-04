@@ -56,9 +56,9 @@ The project needed to use charts.js to display the data on different charts and 
 
 ## Built with
 * 
+* <a href="https://www.chartjs.org/"> ![Static Badge](https://img.shields.io/badge/charts-url?style=for-the-badge&logo=chart.js&color=grey&link=https%3A%2F%2Fwww.chartjs.org%2F)</a
 * <a href="https://github.com/"> ![Static Badge](https://img.shields.io/badge/Github-url?style=for-the-badge&logo=github&color=purple)</a>
-* ![Static Badge](https://img.shields.io/badge/Github-url?style=for-the-badge&logo=Github&logoColor=white&color=purple&link=https%3A%2F%2Fgithub.com%2F)
-* ![Static Badge](https://img.shields.io/badge/visual%20studio-url?style=for-the-badge&logo=visual%20studio&logoColor=blue&color=black&link=https%3A%2F%2Fcode.visualstudio.com%2F)
+* <a href="https://code.visualstudio.com/"> ![Static Badge](https://img.shields.io/badge/visual%20studio-url?style=for-the-badge&logo=visual%20studio&logoColor=blue&color=black&link=https%3A%2F%2Fcode.visualstudio.com%2F)</a>
 
 # Getting Started
 ## Prerequisites
