@@ -54,8 +54,8 @@ function Timeline() {
         {
           label: 'Average litter size',
           data: animalitterlSizes,
-          backgroundColor: 'rgba(195, 176, 0, 0.6)',
-          borderColor: 'rgba(34, 81, 107, 0.5)',
+          backgroundColor: 'rgba(249, 226, 7, 0.6)',
+          borderColor: 'rgba(18, 65, 91, 0.5)',
         },
       ]
     }

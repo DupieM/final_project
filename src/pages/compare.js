@@ -38,13 +38,13 @@ function Compare() {
           {
             label: animalNames,
             data: animalTopSpeed,
-            backgroundColor: 'rgba(195, 176, 0, 0.6)',
+            backgroundColor: 'rgba(249, 226, 7, 0.6)',
             borderColor: 'rgba(34, 81, 107, 0.5)',
           },
           {
             label: animalNames1,
             data: animalTopSpeed1,
-            backgroundColor: 'rgba(53, 162, 235, 0.6)',
+            backgroundColor: 'rgba(0, 240, 255, 0.6)',
             borderColor: 'rgba(53, 162, 235, 0.5)',
           },
         ]
@@ -91,7 +91,7 @@ function Compare() {
           {
             label: 'Number of species',
             data: [animalNumberSpecies, animalNumberSpecies1],
-            backgroundColor: ['rgba(195, 176, 0, 0.6)', 'rgba(53, 162, 235, 0.6)'],
+            backgroundColor: ['rgba(249, 226, 7, 0.6)', 'rgba(0, 240, 255, 0.6)'],
             borderColor: 'rgba(87, 125, 146, 0.6)',
           },
         ]
@@ -119,12 +119,12 @@ function Compare() {
           {
             label: Char3,
             data: Char1,
-            backgroundColor: 'rgba(195, 176, 0, 0.5)',
+            backgroundColor: 'rgba(249, 226, 7, 0.6)',
           },
           {
             label: Char4,
             data: Char2,
-            backgroundColor: 'rgba(53, 162, 235, 0.8)',
+            backgroundColor: 'rgba(0, 240, 255, 0.8)',
           },
         ]
     };
@@ -203,7 +203,7 @@ function Compare() {
                   setChar1(animal1);
                   setChar3(animalname1);
                 })
-                }} style={{width: 170, marginLeft: 100}}>
+                }} style={{width: 170, marginLeft: 100, marginTop: -2}}>
                 <option value="">Choose Animal One</option>
                 <option value="clouded leopard">Clouded Leopard</option>
                 <option value="african wild dog">African Wild Dog</option>
@@ -247,7 +247,7 @@ function Compare() {
                   setChar2(animal2);
                   setChar4(animalname2);
                 })
-                }}  style={{width: 170, marginLeft: 280, marginTop: -25.7}}>
+                }}  style={{width: 170, marginLeft: 280, marginTop: -22.8}}>
                 <option value="">Choose Animal Two</option>
                 <option value="cape lion">Cape Lion</option>
                 <option value="cheetah">Cheetah</option>
