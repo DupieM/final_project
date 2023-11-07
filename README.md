@@ -44,7 +44,7 @@
 
 
 # Product Mockup
-![image1](Images/Mockups/Mockup_2_Compare.jpg)
+![image1](Images/Final_Images/Mockup_2.png)
 
 
 # About the Project
@@ -56,6 +56,8 @@ The project needed to use charts.js to display the data on different charts and 
 
 ## Built with
 * <a href="https://react.dev/"> ![Static Badge](https://img.shields.io/badge/react-url?style=for-the-badge&logo=react&color=black) </a>
+* <a href="https://www.w3schools.com/css/">![Static Badge](https://img.shields.io/badge/Css-url?style=for-the-badge&logo=Cascading%20Style%20Sheets&color=blue)</a>
+* <a href="https://www.w3schools.com/js/">![Static Badge](https://img.shields.io/badge/Javascript-url?style=for-the-badge&logo=JS&color=yellow)</a>
 * <a href="https://www.chartjs.org/"> ![Static Badge](https://img.shields.io/badge/charts-url?style=for-the-badge&logo=chart.js&color=grey&link=https%3A%2F%2Fwww.chartjs.org%2F)</a>
 * <a href="https://github.com/"> ![Static Badge](https://img.shields.io/badge/Github-url?style=for-the-badge&logo=github&color=purple)</a>
 * <a href="https://code.visualstudio.com/"> ![Static Badge](https://img.shields.io/badge/visual%20studio-url?style=for-the-badge&logo=visual%20studio&logoColor=blue&color=black&link=https%3A%2F%2Fcode.visualstudio.com%2F)</a>
@@ -90,11 +92,18 @@ To create the React app do the following steps:
 ## Landing Dashboard
 I needed to display a summary or breakdown of the chosen dataset. I also should display information like key factors of the research or the chosen dataset. On the dashboard page the user can find more information about the website and the API that is used. The data set is outlined as to explain the type of data that will be used for this web application. On this page there is a carousel that displays a distinct animal visually with some interesting facts. There are also two charts on the page, one chart shows the average litter size of panda species and anoder chart that shows number of species for crocodiles.
 
+<img src="Images/Final_Images/landing_dashboard.jpg" width="600px">
+
 ## Comparison Page
 I needed to display three charts on this page, where data could be changed by a selection from a dropdown box. The three charts are a Pie, Bar and Radar chart. Based on the selection made three charts will be displayed as to compare two animals with. The Pie chart shows the number of species for the chosen animals. The Bar chart shows the top speed of the two animals chosen. The Radar chart shows the age of weaning, gestation period, life span, sexual maturity, height and weight of the chosen animals. 
 
+<img src="Images/Final_Images/compare.jpg" width="600px">
+
 ## Timeline Page
 I needed to display a timeline chart on this page where the data could be changed by a dropdown box. The timeline page shows the average litter size of the chosen animal on a timeline chart. Five different animals can be chosen. 
+
+<img src="Images/Final_Images/timeline.jpg" width="600px">
+
 
 # Devolopment Process
 ## Custom UI
@@ -117,7 +126,7 @@ The current web application developed visualize a animal data set but only speci
 ## Video Demonstration
 Please use this link to view my demonstartion walkthrough video of my final webasite application.
 <!-- Link -->
-[View Demonstration]()
+[View Demonstration](https://drive.google.com/file/d/1oLwDHvtqjQAZU_MPmTxFHXprZ6reHVFJ/view?usp=sharing)
 
 # Conclusion
 ### License
