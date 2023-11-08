@@ -45,9 +45,9 @@
 
 # About the Project
 ## Project Description
-I took on the role of a data driven devoloper, being tasked with implementing a real world data driven web application. 
+I took on the role of a data driven developer, being tasked with implementing a real world data driven web application. 
 I could use an API of my choice for the data that had to be collected. 
-I needed to focus this term on research, analysis,implementation and visualisation of the API of my choice. 
+I needed to focus for this project on research, analysis, implementation and visualisation of the API of my choice. 
 The project needed to use charts.js to display the data on different charts and it also needed to use React to create the framework of the front end of the website.
 
 ## Built with
@@ -60,8 +60,8 @@ The project needed to use charts.js to display the data on different charts and 
 
 # Getting Started
 ## Prerequisites
-You will need to have the react app dowloaded on your device.
-You will also need visual studio code to can use the react app function.
+You will need to have the React app downloaded on your device.
+You will also need Visual Studio code to use the React app function.
 
 ## How to install
 Clone the project repository as follow:
@@ -72,28 +72,27 @@ Clone the project repository as follow:
 To create the React app do the following steps:
 
 1.  Go to Visual Studio code  </br>
-    Open your Visual Studio code then click on File and then click on open folder
-    Then navigate to where you created your folder and open it
+    Open your Visual Studio code, then click on File and then click on open folder.
+    Then navigate to where you created your folder and open it.
 
 2.  Start terminal </br>
     Go to 'Terminal' then click on new terminal.
-    After that then Go back to 'Terminal' and then click on 'split terminal'.
+    After that then go back to 'Terminal' and then click on 'split terminal'.
 
 3.  Start React </br>
-    On one side of the terminal type 'npm start2' to navigate into that file.
-    After that type 'npm start' to start the react app
+    In the terminal type 'npm start' to start the react app.
 
 
 # Features and Functionality
-## Landing Dashboard
+### Landing Dashboard
 I needed to display a summary or breakdown of the chosen dataset. I also should display information like key factors of the research or the chosen dataset. On the dashboard page the user can find more information about the website and the API that is used. The data set is outlined as to explain the type of data that will be used for this web application. On this page there is a carousel that displays a distinct animal visually with some interesting facts. There are also two charts on the page, one chart shows the average litter size of panda species and anoder chart that shows number of species for crocodiles.
 
-<img src="Images/Final_Images/landing_dashboard.jpg" width="600px">
+<img src="Images/Final_Images/landing_dashboard.jpg" width="1000px">
 
 ## Comparison Page
 I needed to display three charts on this page, where data could be changed by a selection from a dropdown box. The three charts are a Pie, Bar and Radar chart. Based on the selection made three charts will be displayed as to compare two animals with. The Pie chart shows the number of species for the chosen animals. The Bar chart shows the top speed of the two animals chosen. The Radar chart shows the age of weaning, gestation period, life span, sexual maturity, height and weight of the chosen animals. 
 
-<img src="Images/Final_Images/compare.jpg" width="600px">
+<img src="Images/Final_Images/compare.jpg" width="1000px">
 
 ## Timeline Page
 I needed to display a timeline chart on this page where the data could be changed by a dropdown box. The timeline page shows the average litter size of the chosen animal on a timeline chart. Five different animals can be chosen. 
