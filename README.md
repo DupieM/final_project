@@ -5,7 +5,7 @@
   </a>
 
 <h3 align="center">Wild Animals</h3>
-<h4 align="center">This is a website application for a animal API.</h4.>
+<h4 align="center">This is a website application for an animal API.</h4.>
 
 <h5 align="center" style="padding:0;margin:0;">Mariné du Plessis</h5>
 
@@ -28,14 +28,10 @@
     - [Prerequisites](#prerequisites)
     - [How to install](#how-to-install)
 - [Features and Functionality](#features-and-functionality)
-- [Concept Process](#concept-process)
-    - [Ideation](#ideation)
-    - [Wireframes](#wireframes)
 - [Development Process](#development-process)
-
+    - [Custom UI](#Custom-UI)
     - [Implementation Process](#implementation-process)
-        - [Highlights](#highlights)
-        - [Challenges](#challenges)
+        - [Code Snippets](#Code-Snippets)
     - [Future Implementation](#peer-reviews)
 - [Final Outcome](#final-outcome)
     - [Mockups](#mockups)
@@ -44,7 +40,7 @@
 
 
 # Product Mockup
-![image1](Images/Final_Images/Mockup_2.png)
+<img src="Images/Final_Images/Mockup_2.png" width="1000px">
 
 
 # About the Project
@@ -126,7 +122,7 @@ The current web application developed visualize a animal data set but only speci
 ## Video Demonstration
 Please use this link to view my demonstartion walkthrough video of my final webasite application.
 <!-- Link -->
-[View Demonstration](https://drive.google.com/file/d/1oLwDHvtqjQAZU_MPmTxFHXprZ6reHVFJ/view?usp=sharing)
+[Demonstration - Wild Animals](https://drive.google.com/file/d/1oLwDHvtqjQAZU_MPmTxFHXprZ6reHVFJ/view?usp=sharing)
 
 # Conclusion
 ### License
