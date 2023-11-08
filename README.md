@@ -89,39 +89,39 @@ I needed to display a summary or breakdown of the chosen dataset. I also should 
 
 <img src="Images/Final_Images/landing_dashboard.jpg" width="1000px">
 
-## Comparison Page
+### Comparison Page
 I needed to display three charts on this page, where data could be changed by a selection from a dropdown box. The three charts are a Pie, Bar and Radar chart. Based on the selection made three charts will be displayed as to compare two animals with. The Pie chart shows the number of species for the chosen animals. The Bar chart shows the top speed of the two animals chosen. The Radar chart shows the age of weaning, gestation period, life span, sexual maturity, height and weight of the chosen animals. 
 
 <img src="Images/Final_Images/compare.jpg" width="1000px">
 
-## Timeline Page
+### Timeline Page
 I needed to display a timeline chart on this page where the data could be changed by a dropdown box. The timeline page shows the average litter size of the chosen animal on a timeline chart. Five different animals can be chosen. 
 
-<img src="Images/Final_Images/timeline.jpg" width="600px">
+<img src="Images/Final_Images/timeline.jpg" width="1000px">
 
 
-# Devolopment Process
-## Custom UI
-My custom UI element was that I created an interesting background picture to use on my website for the three pages we needed to create. I also included as a UI element a carousel that displays one exstict animal visually and with interesting facts. I also created a custom logo for this website.
+# Development Process
+### Custom UI
+My custom UI element was that I created an interesting background picture to use on my website for the three pages we needed to create. I also included as a UI element a carousel that displays one exstinct animal visually and with interesting facts. I also created a custom logo for this website.
 
-## Implementation Process
-The higlight was in researching API's and decinding on which API's to use. Analysing the dataset of my chosen API was also a higlight for me during the development process.
-Some challeges that I faced while doing this project was to display my different characteristics of animals on the 4 charts we needed to have. Another challange was to activate the dropdown box on the compare and timeline page depending on which ever animal you choose.
+### Implementation Process
+The highlight was in researching API's and deciding on which API's to use. Analysing the dataset of my chosen API was also a higlight for me during the development process.
+Some challeges that I faced while doing this project was to display my different characteristics of animals on the 4 charts we needed to have. Another challenge was to activate the dropdown box on the compare and timeline page depending on which animal you choose.
 
 ### Code Snippets
 1. Dropdown box on the compare and timeline page
 ![Comparison_Timeline_page](Images/Code_snippets_dropdown_1.jpg)
 To fix the problem with the dropdown box to display different animals I decided to add the "onChange" function to the dropdown box.
-This helped me alot by changing the name at end of Api key to be able to get difffernt animal statistics.
+This helped me by changing the name at the end of the API key to be able to get different animals.
 
 # Future Implementation
-The current web application developed visualize a animal data set but only specific data elemnts from that data set. For future implementations more data elements can be added to show more meaningful patterns as derived from the data.
+The current web application developed visualize an animal data set but only specific data elements from that data set. For future implementations more data elements can be added to show more meaningful patterns as derived from the data.
 
 # Final Outcome 
 ## Video Demonstration
 Please use this link to view my demonstartion walkthrough video of my final webasite application.
 <!-- Link -->
-[Demonstration - Wild Animals](https://drive.google.com/file/d/1oLwDHvtqjQAZU_MPmTxFHXprZ6reHVFJ/view?usp=sharing)
+[Demonstration Video - Wild Animals](https://drive.google.com/file/d/1oLwDHvtqjQAZU_MPmTxFHXprZ6reHVFJ/view?usp=sharing)
 
 # Conclusion
 ### License
@@ -129,4 +129,4 @@ Rights reserved © 2023
 
 ### Author
 **Mariné du Plessis** </br>
-[Gmail](mdp.marine@gmail.com)
+[Gmail](221326@virtualwindow.co.za)
